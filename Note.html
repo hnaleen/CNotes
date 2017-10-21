@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Title</title>
 
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
@@ -9,20 +12,39 @@
 </head>
 <body onload="Note.init()" class="container">
 
-    <input type="button" onclick="Note.numberList()" value="Numbered List">
-    <input type="button" onclick="Note.bulletList()" value="Bullet List">
-    <input type="button" onclick="Note.print()" value="Print">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">C Notes</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#" onclick="Note.numberList()">Numbered List</a></li>
+                <li><a href="#" onclick="Note.bulletList()">Bullet List</a></li>
+                <li><a href="#print" onclick="Note.print()">Print</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-
-    </br>
-
+<div class="container" style="padding-top: 60px">
     <div class="col-sm-12" style="background-color: whitesmoke; min-height: 300px; padding: 15px ">
         <h1 id="title" contenteditable="true" data-text="Title:"></h1>
         <div id="noteText" contenteditable="true" data-text="Note:" style="font-size: larger"></div>
     </div>
+</div>
 
 
 </body>
+<script src="js/lib/jquery.min.js"></script>
 <script src="js/Note/Note.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
 
 </html>
