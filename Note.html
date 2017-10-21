@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Note.css">
+</head>
+<body onload="Note.init()" class="container">
+
+    <input type="button" onclick="Note.numberList()" value="Numbered List">
+    <input type="button" onclick="Note.bulletList()" value="Bullet List">
+    <input type="button" onclick="Note.print()" value="Print">
+
+
+    </br>
+
+    <div class="col-sm-12" style="background-color: whitesmoke; min-height: 300px; padding: 15px ">
+        <h1 id="title" contenteditable="true" data-text="Title:"></h1>
+        <div id="noteText" contenteditable="true" data-text="Note:" style="font-size: larger"></div>
+    </div>
+
+
+</body>
+<script src="js/Note/Note.js"></script>
+
+</html>

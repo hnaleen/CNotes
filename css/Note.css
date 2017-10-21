@@ -1,0 +1,8 @@
+[contentEditable=true]:empty:before {
+    color: burlywood;
+    content: attr(data-text)
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
